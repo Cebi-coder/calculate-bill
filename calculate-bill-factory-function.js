@@ -1,20 +1,21 @@
-function calculateBill(){
+function totalPhoneBill(billString) {
+  
+    var  billItems = billString.split(",");
+    var billTotal = 0;
     
-    var billString; 
+       
+    for (var i = 0;i<billItems.length;i++){
+    var billItem = billItems[i].trim();
     
-    var totalBill = 0
-
-    
-}
-
-function callPrice() {
-    billString = 
-
-}
-
-function smsPrice(){
-    "sms" = 0.75
-}
-
-
-btn.addEventListener('click', calculateBill);
+            if (billItem === "call"){
+                 billTotal += 2.75
+    }
+            else if (billItem === "sms"){
+                billTotal += 0.75;
+    } 
+    }
+      
+     var roundedBillTotal = billTotal.toFixed(2);
+    return roundedBillTotal;
+     
+    } 
